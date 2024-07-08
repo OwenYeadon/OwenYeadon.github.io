@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+	<html lang="en">
+	<head>
+		<title link>Owen's Portfolio</title>
+		<link rel="stylesheet" href="styles.css" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#education">Current Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Website Coder</p>
+                    <h1>I'm <span>Owen</span>, an upcoming web developer</h1>
+                </div>
+            </div>
+        </div>
+
+                            <!--THIS IS THE GAP BETWEEN THE WELCOME SECTION AND THE ABOUT ME SECTION-->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/person.png" alt="about me image">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="about-title">About Me</h1>
+                        <p class="about-sub-text">Hello, my name is Owen Yeadon and i am currently working on improving my skills on web development,
+                            i am studying through a website called freeCodeCamp and i have successfully achieved my HTML certification,
+                            i am hoping that doing this will improve my chances of me getting a job in web development. <br><br><br><br> I have
+                            been testing my skills before with some basic websites, i am always willing to learn new things to improve my skills
+                            when it comes to HTML.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML:</span><br><br>I have successfully achieved my certification in HTML through freeCodeCamp</li>
+                                <li><span>Java:</span><br><br>I Am currently leanring Java through the website courses as well.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experiance">
+                            <ul>
+                                <li><span>freeCodeCamp:</span><br><br>All the new things i learn at the moment are through a website called freeCodeCamp,
+                                i will have a link <a href="https://www.freecodecamp.org/fccf81163e2-9072-438a-81ce-31a5a48b7b5a" target="_blank" class="code-camp-link">HERE</a> to my profile where you can see all the tasks i have completed and my certificate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                <!--THIS IS THE GAP BETWEEN THE CURRENT EDUCATION SECTION AFTER ABOUT ME SECTION-->        
+        <div id="education">
+            <div class="container">
+                <h1 class="education-title">Current Education:</h1>
+                <p class="education-text">Hello, for my education i don't have a lot to say, however i have always been a fan of trying to create / program websites,
+                    I don't have any University or College degrees in HTML or any form or web development but none the less it is something i have
+                    always been fascinated by, i have made a few test websites in the past (nothing published) and i am always watching YouTube
+                    videos and google searches on how to create things im not sure about to boost my learning, as well as this i have been studying through
+                    freeCodeCamp as mentioned earlier. <br><br>I am always trying to find ways to improve my skills and learn new things about
+                    development. <br><br><p class="second-education-text">Here is the link to my <a href="https://www.freecodecamp.org/fccf81163e2-9072-438a-81ce-31a5a48b7b5a" target="_blank" class="code-camp-link"><span class="code-camp-text">freeCodeCamp</span></a> profile</p>
+                </p>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <h1 class="contact-title">Contact</h1>
+                <p class="contact-text">If you would like to contact me i will list my contact details below. For the purpose of
+                    this being on GitHub I will provide my email address, i can provide further details later on. 
+                </p>
+                <ul>
+                    <li><img src="images/mail.png" alt="GMail" class="contact-logo">owen.dev1997@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <footer>
+                    Website created by Owen Yeadon on 06/07/2024. This website is created for the purpose of showing what i have 
+                    currently leanred from online courses and searching. Thank you for viewing the website.
+                </footer>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+        </script>
+    </body>
+</html>
